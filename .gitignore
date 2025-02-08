@@ -1,0 +1,12 @@
+# node modules
+node_modules
+
+# build folder
+dist
+tsconfig.node.tsbuildinfo
+tsconfig.app.tsbuildinfo
+
+# env variables
+.env
+.env.production
+
