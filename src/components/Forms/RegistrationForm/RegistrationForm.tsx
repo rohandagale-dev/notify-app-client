@@ -7,6 +7,7 @@ import { Label } from '@/components/ui/label'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { registerUser } from '@/services/authService'
+import { getObject } from '@/services/BucketService'
 
 const RegistrationForm = () => {
   const { toast } = useToast()
@@ -76,6 +77,7 @@ const RegistrationForm = () => {
   // submit form
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault()
+    await getObject("IMG");
     const { username, email, password } = formData
 
     const usernameError = username.trim().length === 0 ? 'Username is required' : ''
